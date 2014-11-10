@@ -6,10 +6,12 @@ module PhyshRoller
 
     def initialize(sides:)
       @sides = sides
+      @history = []
     end
 
     def roll
-      1
+      @history << rand(1..@sides)
+      @history.last
     end
   end
 end
